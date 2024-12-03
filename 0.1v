@@ -1,0 +1,23 @@
+import random
+lista = ["tesoura", "papel", "pedra"]
+chute = input("É um jogo de pedra, papel ou tesoura, faça sua escolha: ")
+maquina = random.choice(lista)
+if chute == "tesoura" or chute == "papel" or chute == "pedra":
+    print("A máquina escolheu:", maquina)
+    if chute == maquina:
+        print("Empate!")
+    elif (chute == "tesoura" and maquina == "papel") or (chute == "papel" and maquina == "pedra") or (chute == "pedra" and maquina == "tesoura"):
+        print("Parabéns, você ganhou!")
+    else:
+        print("A máquina ganhou!")
+else:
+    while chute != "tesoura" and chute != "papel" and chute != "pedra":
+        print("Escolha inválida. Tente novamente.")
+        chute = input("É um jogo de pedra, papel ou tesoura, faça sua escolha: ")
+    print("A máquina escolheu:", maquina)
+    if chute == maquina:
+        print("Empate!")
+    elif (chute == "tesoura" and maquina == "papel") or (chute == "papel" and maquina == "pedra") or (chute == "pedra" and maquina == "tesoura"):
+        print("Parabéns, você ganhou!")
+    else:
+        print("A máquina ganhou!")
